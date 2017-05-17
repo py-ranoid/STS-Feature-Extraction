@@ -40,6 +40,9 @@ df = df['id;"polarity";"tweet"'].apply(cleanser)
 # Renaming columns appropriately
 df = df.rename(columns = {0:'id',1:'polarity',2:'tweets'})
 
+# Saving cleansed data to sts_cleansed.csv
+df[['id','polarity','tweets']].to_csv("sts_cleansed.csv")
+
 df.head()
 
 
